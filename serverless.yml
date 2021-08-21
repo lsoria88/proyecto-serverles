@@ -1,0 +1,43 @@
+service: api-serverless-aws
+
+frameworkVersion: '2'
+
+provider: 
+  name: aws
+  stage: dev
+  runtime: nodejs12.x
+  timeout: 10
+  memory: 128
+  enviroment:
+    ENV: develop
+
+functions:
+  helloworld:
+    handler: index.helloWorld
+    description: Proyecto serverless modelo
+    enviroment:
+      ENV: dev-function
+    events:
+      - http:
+          path: /{name}
+          method: GET 
+          cors: true
+
+  suma:
+    handler: index.suma
+    description: Suma function
+    enviroment:
+    events:
+      - http:
+          path: /suma
+          method: POST 
+          cors: true
+          private: true
+
+  test:
+    handler: index.test
+    description: Test function
+
+
+plugins:
+  - serverless-offline

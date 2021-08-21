@@ -1,0 +1,23 @@
+{
+  "name": "proyecto-serverles",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lsoria88/proyecto-serverles.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lsoria88/proyecto-serverles/issues"
+  },
+  "homepage": "https://github.com/lsoria88/proyecto-serverles#readme",
+  "dependencies": {
+    "serverless-offline": "^8.0.0"
+  }
+}
